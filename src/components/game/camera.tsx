@@ -3,8 +3,8 @@
 import React, { useRef, useEffect } from "react";
 import { useThree, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { usePlayerStore } from "@/stores/player-store";
-import { useCameraStore } from "@/stores/camera-store";
+import { usePlayerStore } from "@/utils/stores/player-store";
+import { useCameraStore } from "@/utils/stores/camera-store";
 import * as THREE from "three";
 
 type ExtendedOrbitControlsProps = typeof OrbitControls & {

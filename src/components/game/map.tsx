@@ -2,7 +2,7 @@
 
 import { RigidBody } from "@react-three/rapier";
 import * as THREE from "three";
-import { useMapLoader } from "@/hooks/use-map-loader";
+import { useMapLoader } from "@/utils/hooks/use-map-loader";
 
 interface MapProps {
   glbPath: string;

@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { RapierRigidBody, RigidBody } from "@react-three/rapier";
 import { useKeyboardControls } from "@react-three/drei";
-import { usePlayerStore } from "@/stores/player-store";
+import { usePlayerStore } from "@/utils/stores/player-store";
 
 export function Player() {
   const rigidBodyRef = useRef<RapierRigidBody>(null);
