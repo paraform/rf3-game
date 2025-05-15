@@ -4,7 +4,7 @@ import {
   KeyboardControlsEntry,
 } from "@react-three/drei";
 
-const keyboardControlMap: KeyboardControlsEntry[] = [
+const keyboardControlsMap: KeyboardControlsEntry[] = [
   { name: "forward", keys: ["ArrowUp", "w", "W"] },
   { name: "backward", keys: ["ArrowDown", "s", "S"] },
   { name: "left", keys: ["ArrowLeft", "a", "A"] },
@@ -16,7 +16,7 @@ interface KeyboardControlsProps {
 }
 
 export const KeyboardControls = ({ children }: KeyboardControlsProps) => (
-  <DreiKeyboardControls map={keyboardControlMap}>
+  <DreiKeyboardControls map={keyboardControlsMap}>
     {children}
   </DreiKeyboardControls>
 );

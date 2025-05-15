@@ -7,17 +7,15 @@ import { usePlayerStore } from "@/utils/stores/player-store";
 import { useCameraStore } from "@/utils/stores/camera-store";
 import * as THREE from "three";
 
-type ExtendedOrbitControlsProps = typeof OrbitControls & {
-  enabled?: boolean;
-};
+import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 
-interface CameraControllerProps {
+interface CameraControlsProps {
   isPlaying: boolean;
 }
 
-export function CameraController({ isPlaying }: CameraControllerProps) {
+export function CameraControls({ isPlaying }: CameraControlsProps) {
   const { camera, gl } = useThree();
-  const controlsRef = useRef<ExtendedOrbitControlsProps>(null);
+  const controlsRef = useRef<OrbitControlsImpl>(null);
   const { playerRef } = usePlayerStore();
   const { height, distance } = useCameraStore();
 
@@ -41,6 +39,7 @@ export function CameraController({ isPlaying }: CameraControllerProps) {
       camera.position.lerp(cameraPosition, 0.1);
       camera.lookAt(playerPosition);
     }
+    controlsRef.current?.update();
   });
 
   return (

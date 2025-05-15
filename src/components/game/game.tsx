@@ -6,14 +6,14 @@ import { Physics } from "@react-three/rapier";
 import { Map } from "./map";
 import { Lighting } from "./lighting";
 import { Player } from "./player";
-import { CameraController } from "./camera";
-import { KeyboardControls } from "./keyboard-controls";
+import { CameraControls } from "./controls/camera-controls";
+import { KeyboardControls } from "./controls/keyboard-controls";
 
 export default function Game() {
   return (
     <KeyboardControls>
       <Canvas>
-        <CameraController isPlaying={true} />
+        <CameraControls isPlaying={true} />
         <Lighting />
         <Suspense>
           <Physics debug>
