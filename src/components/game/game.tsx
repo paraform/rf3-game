@@ -16,7 +16,7 @@ const keyboardControlMap = [
   { name: "right", keys: ["ArrowRight", "d", "D"] },
 ];
 
-export default function Scene() {
+export default function Game() {
   return (
     <KeyboardControls map={keyboardControlMap}>
       <Canvas>

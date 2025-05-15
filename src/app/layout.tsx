@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import dynamic from "next/dynamic";
 
-const Scene = dynamic(() => import("@/components/game/scene"), {
+const Game = dynamic(() => import("@/components/game/game"), {
   ssr: !!false,
 });
 
@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className="relative z-0 flex h-screen min-h-screen w-screen">
-          <Scene />
+          <Game />
           {children}
         </main>
       </body>
